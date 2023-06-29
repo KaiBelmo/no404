@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "No 404",
+    "description": "This extension listens to 404 errors and automatically redirects to the Internet Archive for archived versions of the missing web pages",
+    "version": "0.0.2",
+    "icons": {
+        "16": "logo/logo.png",
+        "48": "logo/logo.png",
+        "128": "logo/logo.png"
+    },
+    "action": {
+        "default_title": "No 404",
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": [],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "content_scripts": [{
+        "js": ["foreground.js"],
+        "matches": ["https://github.com/*"]
+    }]
+}
