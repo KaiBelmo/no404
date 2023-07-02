@@ -12,9 +12,12 @@
         "default_title": "No 404",
         "default_popup": "popup/popup.html"
     },
-    "permissions": [],
+    "permissions": [
+        "storage",
+        "webNavigation"  
+    ],
     "host_permissions": [
-        "*://*/*"
+        "<all_urls>"
     ],
     "background": {
         "service_worker": "service-worker.js"
