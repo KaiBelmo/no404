@@ -1,0 +1,31 @@
+#listContainer {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+#list {
+  flex: 1;
+  overflow: auto;
+  padding-top: 10px;
+}
+
+#counting {
+  font-size: 14px;
+  white-space: nowrap;
+  animation: fade-in 1s forwards;
+}
+
+#list li {
+  opacity: 0;
+  animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

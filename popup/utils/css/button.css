@@ -1,0 +1,35 @@
+.button {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem; 
+  padding-left: 0.8rem;
+  padding-right: 0.8rem; 
+  font-size: 14px;
+  border-color: rgb(36, 47, 63);
+  border-width: 1.5px;
+  transition: all 200ms ease-in-out;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #e0e0e0;
+}
+
+#prevBtn {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+} 
+
+#nextBtn {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+#pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 0.4rem;
+}

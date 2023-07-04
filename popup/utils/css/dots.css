@@ -1,0 +1,26 @@
+.loading-animation {
+  display: flex;
+  gap: 2px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#loading {
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  animation: flicker-animation 1.4s infinite;
+}
+
+@keyframes flicker-animation {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

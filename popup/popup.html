@@ -3,26 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="popup.css" />
-    <script src="popup.js"></script>
+    <link rel="stylesheet" href="./utils/css/button.css" />
+    <link rel="stylesheet" href="./utils/css/list.css" />
+    <link rel="stylesheet" href="./utils/css/dots.css" />
+    <script src="popup.js" type="module"></script>
+    <script src="./utils/js/utils.js" type="module"></script>
+    <script src="./utils/js/pagination.js" type="module"></script>
     <title>No 404</title>
   </head>
   <body>
     <main>
+      <div class="loading-animation">
+        <span id="loading">
+          loading  
+        </span>
+      </div>
+      
       <div id="listContainer">
         <ul id="list"></ul>
         <p id="counting"></p>
       </div>
       <div id="pagination">
-          <button class="button" id="prevBtn">
-            prev
-          </button>
-          <button class="button" id="nextBtn">
-            next
-          </button>
+        <button class="button" id="prevBtn">prev</button>
+        <button class="button" id="nextBtn">next</button>
       </div>
-      <div class="creator">
-        Created by Belmo.
-      </div>
+      <div class="creator">Created by Belmo.</div>
     </main>
   </body>
 </html>
