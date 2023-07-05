@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   pagination.counting = document.getElementById("counting");
 
   chrome.storage.sync.get(['url'], async (message) => {
+    pagination.baseURL = message.url;
     loadingEl.innerText = 'checking page availability';
     const res = await fetch(`https://archive.org/wayback/available?url=${encodeURIComponent(message.url)}`)
       .catch(() => {

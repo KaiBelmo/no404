@@ -6,6 +6,7 @@ export class Pagination {
     this.offset = 10;
     this.currentPage = 0;
     this.totalPages = 0;
+    this.baseURL = "";
     this.displayedList = null;
     this.timeStamps = null;
     this.listEl = null;
@@ -27,7 +28,12 @@ export class Pagination {
 
     this.displayedList.forEach((element) => {
       const li = document.createElement("li");
-      li.innerText = parseDateString(element);
+      const a = document.createElement("a");
+      // http://web.archive.org/web/20230629030102/https://smth.idk/
+      a.href = `http://web.archive.org/web/${element}/${this.baseURL}`;
+      a.textContent = parseDateString(element);
+      a.target = '_blank';
+      li.appendChild(a);
       this.listEl.appendChild(li);
     });
 
@@ -36,8 +42,3 @@ export class Pagination {
     this.nextBtn.classList.toggle("disabled", this.currentPage === this.totalPages - 1);
   }
 }
-
-// http://web.archive.org/web/20230629030102/https://jsfiddle.net/
-// 2023/06/29/
-// 030102
-// 03:01:02
