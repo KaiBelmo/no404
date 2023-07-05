@@ -1,5 +1,5 @@
 <h1 align="center">No404</h1>
-<p align="center">The extension listens to the websites you visit and gives you access to their archived versions on the Internet Archive .</p>
+<p align="center">This extension listens to the websites you visit and gives you access to their archived versions on the Internet Archive.</p>
 
 [![no404 logo](logo/logoCover.jpg)](https://github.com/KaiBelmo/no404)
 
