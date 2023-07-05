@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         if (AlltimeStamps.ok) {
           let GetAlltimeStamps = await AlltimeStamps.json();
-          console.log(GetAlltimeStamps);
           GetAlltimeStamps.shift();
           pagination.timeStamps = GetAlltimeStamps;
           pagination.totalPages = Math.ceil(GetAlltimeStamps.length / pagination.offset);
