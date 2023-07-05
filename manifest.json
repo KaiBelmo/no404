@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "No 404",
-    "description": "This extension listens to 404 errors and automatically redirects to the Internet Archive for archived versions of the missing web pages",
+    "description": "This extension listens to the websites you visit and gives you access to their archived versions on the Internet Archive.",
     "version": "0.0.2",
     "icons": {
         "16": "logo/logo.png",
