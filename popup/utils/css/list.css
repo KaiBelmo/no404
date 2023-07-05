@@ -1,5 +1,5 @@
 #listContainer {
-  height: 80%;
+  height: 284px;
   display: flex;
   flex-direction: column;
 }
@@ -7,11 +7,13 @@
 #list {
   flex: 1;
   overflow: auto;
-  padding-top: 10px;
+  padding-top: 4px;
 }
 
 #counting {
   font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
   animation: fade-in 1s forwards;
 }

@@ -10,13 +10,23 @@ main {
   padding: 1em 2em;
   background-color: rgb(239, 239, 239);
   color: rgb(50, 64, 71);
-  width: 14em;
+  width: 225px;
   height: 350px;
 }
-
 
 .creator {
   font-size: 13px;
   text-align: center;
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.header {
+  font-weight: 700;
+  text-align: center;
 }
