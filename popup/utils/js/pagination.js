@@ -6,6 +6,7 @@ export class Pagination {
     this.currentPage = 0;
     this.totalPages = 0;
     this.displayedList = null;
+    this.timeStamps = null;
     this.listEl = null;
     this.counting = null;
     this.prevBtn = null;
@@ -14,11 +15,11 @@ export class Pagination {
   renderList(array) {
     if (this.listEl == null || this.prevBtn == null || this.nextBtn == null)
       return;
-
     this.start = this.currentPage * this.offset;
     this.end = (this.totalPages <= this.offset)
-      ? this.totalPages
+      ? this.timeStamps.length
       : this.start + this.offset;
+      
     this.displayedList = array.slice(this.start, this.end);
 
     this.listEl.innerHTML = "";
@@ -29,7 +30,7 @@ export class Pagination {
       this.listEl.appendChild(li);
     });
 
-    this.counting.innerText = `Showing ${this.start + 1} to ${this.end} of ${this.totalPages} Entries`;
+    this.counting.innerText = `Showing ${this.start} to ${this.end} of ${this.timeStamps.length} Entries`;
     this.prevBtn.classList.toggle("disabled", this.currentPage === 0);
     this.nextBtn.classList.toggle("disabled", this.currentPage === this.totalPages - 1);
   }
