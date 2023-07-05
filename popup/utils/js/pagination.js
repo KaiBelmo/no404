@@ -1,3 +1,4 @@
+import { parseDateString } from './utils.js'
 export class Pagination {
   constructor() {
     this.start = 0;
@@ -19,14 +20,14 @@ export class Pagination {
     this.end = (this.totalPages <= this.offset)
       ? this.timeStamps.length
       : this.start + this.offset;
-      
+
     this.displayedList = array.slice(this.start, this.end);
 
     this.listEl.innerHTML = "";
 
     this.displayedList.forEach((element) => {
       const li = document.createElement("li");
-      li.innerText = element;
+      li.innerText = parseDateString(element);
       this.listEl.appendChild(li);
     });
 
@@ -35,3 +36,8 @@ export class Pagination {
     this.nextBtn.classList.toggle("disabled", this.currentPage === this.totalPages - 1);
   }
 }
+
+// http://web.archive.org/web/20230629030102/https://jsfiddle.net/
+// 2023/06/29/
+// 030102
+// 03:01:02
