@@ -1,16 +1,3 @@
-export const pagination = {
-  start: 0,
-  end: 0,
-  offset: 10,
-  currentPage: 0,
-  totalPages: 0,
-  displayedList: null,
-  listEl: null,
-  counting: null,
-  prevBtn: null,
-  nextBtn: null,
-};
-
 export const isEmpty =  (obj) => {
   return Object.keys(obj).length === 0;
 }
