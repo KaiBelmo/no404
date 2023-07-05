@@ -1,4 +1,4 @@
-import { parseDateString } from './utils.js'
+import { parseDateString, getWayBackMachineLink } from './utils.js'
 export class Pagination {
   constructor() {
     this.start = 0;
@@ -30,7 +30,7 @@ export class Pagination {
       const li = document.createElement("li");
       const a = document.createElement("a");
       // http://web.archive.org/web/20230629030102/https://smth.idk/
-      a.href = `http://web.archive.org/web/${element}/${this.baseURL}`;
+      a.href = getWayBackMachineLink(element, this.baseURL);
       a.textContent = parseDateString(element);
       a.target = '_blank';
       li.appendChild(a);

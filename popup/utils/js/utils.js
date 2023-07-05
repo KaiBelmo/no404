@@ -38,3 +38,7 @@ export const parseDateString = (str) => {
   
   return `${year}/${month}/${day} - ${hour}:${minute}:${second}`;
 }
+
+export const getWayBackMachineLink = (date, baseUrl) => {
+  return `http://web.archive.org/web/${date}/${baseUrl}`;
+}
