@@ -14,16 +14,18 @@ main {
   height: 350px;
 }
 
+#counting {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: fade-in 1s forwards;
+}
+
 .creator {
   font-size: 13px;
   text-align: center;
   margin-top: 0.5rem;
-}
-
-.disabled {
-  pointer-events: none;
-  cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .header {

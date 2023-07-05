@@ -10,18 +10,35 @@
   padding-top: 4px;
 }
 
-#counting {
-  font-size: 14px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: fade-in 1s forwards;
-}
-
 #list li {
   opacity: 0;
   animation: fade-in 1s forwards;
+  transform: all 200ms ease;
 }
+
+#list li a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+#list li a:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #323232;
+  transform-origin: bottom right;
+  transition: transform 0.15s ease-out;
+}
+
+#list li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
 @keyframes fade-in {
   0% {
