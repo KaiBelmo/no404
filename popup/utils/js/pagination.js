@@ -18,7 +18,7 @@ export class Pagination {
     if (this.listEl == null || this.prevBtn == null || this.nextBtn == null)
       return;
     this.start = this.currentPage * this.offset;
-    this.end = (this.totalPages <= this.offset)
+    this.end = (this.timeStamps.length < this.offset)
       ? this.timeStamps.length
       : this.start + this.offset;
 
